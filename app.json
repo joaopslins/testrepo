@@ -1,9 +1,6 @@
 {
   "name": "myproj",
   "description": "Myproj Heroku app.",
-  "scripts": {
-    "postdeploy": "python manage.py migrate"
-  },
   "env": {
     "ALLOWED_HOSTS": {
       "description": "Django ALLOWED_HOSTS setting, e.g.: .appname.herokuapp.com"
