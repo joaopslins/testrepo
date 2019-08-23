@@ -24,7 +24,7 @@ echo "-----> Pushing source maps to Sentry"
 if [ -n "$SENTRY_API_KEY" ] && [ -n "$SENTRY_ORG" ] && [ -n "$SENTRY_PROJECT_NAME" ] && [ -n "$HEROKU_SLUG_COMMIT" ]; then
     npx @sentry/cli --auth-token=$SENTRY_API_KEY releases --org=$SENTRY_ORG --project=$SENTRY_PROJECT_NAME files $HEROKU_SLUG_COMMIT upload-sourcemaps ./frontend/webpack_bundles/ --url-prefix "~/static/webpack_bundles/" --rewrite
 fi
-rm ./assets/bundles/*.js.map
+rm ./frontend/webpack_bundles/*.js.map
 
 
 echo "-----> Post-compile done"
